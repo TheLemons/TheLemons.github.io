@@ -21,6 +21,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  TheLemons
 
 # Build settings
+exclude: ["Gemfile", "Gemfile.lock", README.md"]
 markdown: kramdown
 theme: minima
 plugins:
