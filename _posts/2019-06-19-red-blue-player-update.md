@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "RedBluePlayer - Status Update June 19, 2019"
+title:  "RedBluePlayer - Data Massaging and Actor Trie"
 date:   2019-06-19 22:55:50 -0400
 categories: RedBluePlayer
 ---
@@ -56,7 +56,7 @@ My next step will be to add another display/window to the emulator and attempt t
 
 
 
-SpriteData struct 
+
 ```Rust
 #[derive(Clone)]
 pub struct SpriteData {
@@ -79,7 +79,7 @@ struct TrieNode {
     children: [Option<Box<TrieNode>>; 4],
 }
 
-// 0x00, 0x60, 0xc0, 0xff
+// Color code indices: 0x00, 0x60, 0xc0, 0xff
 impl TrieNode {
     fn new(d: TrieData) -> Self {
         TrieNode{data: d, children: [None, None, None, None]}
@@ -87,7 +87,8 @@ impl TrieNode {
 
     fn node_search(&self, data: &Vec<u8>, i: usize, actor: bool, indices: &[usize]) -> Option<SpriteData> {
         match self.data {
-            TrieData::Leaf(ref matches) => {                for v in matches {
+            TrieData::Leaf(ref matches) => {                
+            	for v in matches {
                     if actor && v.data_actor_equals(data) {
                         return Some(v.clone()); 
                     } else if !actor && v.data_equals(data) {

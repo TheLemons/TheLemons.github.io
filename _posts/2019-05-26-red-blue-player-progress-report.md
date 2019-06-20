@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "RedBluePlayer - Status Update May 26, 2019"
+title:  "RedBluePlayer - Actor Recognition and Emulator Updates"
 date:   2019-05-26 22:55:50 -0400
 categories: RedBluePlayer
 ---

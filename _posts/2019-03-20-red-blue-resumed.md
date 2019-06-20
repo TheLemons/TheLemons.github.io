@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "RedBluePlayer - Status Update March 20, 2019"
+title:  "RedBluePlayer - Resumed and Rust Rewrite"
 date:   2019-03-20 18:29:50 -0400
 categories: RedBluePlayer
 ---
