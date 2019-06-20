@@ -29,7 +29,7 @@ Now, with a optimal set of sprites, we can greatly reduce the number of sprites 
 
 ***
 
-![](/assets/kanto-rgb-emul.png){:width="640px"}
+![](/assets/kanto-rbg-emul.png){:width="640px"}
 
 The Kanto overworld map is ~1400 times larger than the regular images expected to process with the GameBoy screen. Much of it is a collection of white cells needed to pad out areas and should not match anything.
 
